@@ -14,6 +14,9 @@ This order page is building using Webpack, Bootstrap(for responsive design) and 
 - when input changes, the summary value will change accordingly.
 
 Below are some screenshots.
+
 ![responsive design-mobile](https://user-images.githubusercontent.com/22902303/161987103-c60947bc-0504-4d20-98af-ab6d42241b21.png)
+
 ![valid true](https://user-images.githubusercontent.com/22902303/161987105-f01e241d-6f98-4c9d-a61d-7db453d703ed.png)
+
 ![with validation](https://user-images.githubusercontent.com/22902303/161987107-73f4a435-5ca9-448a-a59e-7b4a709aef21.png)
