@@ -15,6 +15,7 @@ This order page is building using Webpack, Bootstrap(for responsive design) and 
 - when input changes, the summary value will change accordingly.
 
 ### Please go to wwwroot folder to get the html page and loaded to browser.
+### Suggested: you may want to use vscode to open the project folder, and use extention: live server https://github.com/ritwickdey/vscode-live-server-plus-plus to open the html page.
 
 Below are some screenshots.
 
