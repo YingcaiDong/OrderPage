@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body class="bg-light bg-gradient">
+    <div class="row justify-content-center m-0" id="root">
+        <div class="col-md-6 p-5 m-5 shadow bg-body rounded">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-12" data-bind="page-name">
+                    <h1>Order Page</h1>
+                </div>
+
+                <!-- Add info and address before the order summary -->
+
+                <div class="w-100" data-bind="break-before-order"></div>
+                <!-- tax and final price -->
+                <div class="col-9" data-bind="order-summary">
+                    <div class="row mb-3 justify-content-between" data-bind="tax-rate">
+                        <div class="col-auto">
+                            <label for="taxRate" class="form-label">Tax rate</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="col-5" id="taxRate" data-bind="tax-rate-value" type="text" value="" required readonly>
+                        </div>
+                    </div>
+                    <div class="row mb-3 justify-content-between">
+                        <div class="col-auto">
+                            <label for="tax" class="form-label">Tax</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="col-5" id="tax" data-bind="tax-value" type="text" value="0" required readonly>
+                        </div>
+                    </div>
+                    <div class="row mb-3 justify-content-between">
+                        <div class="col-auto">
+                            <label for="final" class="form-label">Total</label>
+                        </div>
+                        <div class="col-auto">
+                            <input class="col-5" id="final" data-bind="total-value" type="text" value="0" required readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary" data-bind="submit">Submit</button>
+                </div>
+
+
+                <template data-bind="tmp-multiple">
+                    <div class="card p-3 mb-3">
+                        <!-- Append item before button section -->
+                        <div class="row" data-bind="button-section">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary" data-bind="btn-add">Add</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-danger" data-bind="btn-remove">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+
+                <template data-bind="tmp-text-input">
+                    <div data-bind="col">
+                        <label for="textTitle" class="form-label">Put title here</label>
+                        <span class="ml-3 text-danger font-weight-bold d-none" data-bind="require">*</span>
+                        <input type="text" id="textTitle" class="form-control" aria-describedby="textFormat">
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please fill in some text.</div>
+                    </div>
+                </template>
+
+                <template data-bind="tmp-select-input">
+                    <div data-bind="col">
+                        <label for="selectTitle" class="form-label">Put title here</label>
+                        <span class="ml-3 text-danger font-weight-bold d-none" data-bind="require">*</span>
+                        <select id="selectTitle" class="form-select" aria-describedby="selectFormat" data-bind="select-container">
+                            <option value="">Please Select</option>
+                        </select>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please select one.</div>
+                    </div>
+                </template>
+
+                <template data-bind="tmp-radio-input">
+                    <div data-bind="col">
+                        <label class="form-label">Expedited Shipping</label>
+                        <span class="ml-3 text-danger font-weight-bold d-none" data-bind="require">*</span>
+                        <div data-bind="select-container"></div>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please select one.</div>
+                        
+                        <template data-bind="tmp-radio-select-input">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="300" id="r1" name="radio" required>
+                                <label class="form-check-label" for="r1">
+                                    Yes
+                                </label>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/vendors.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+</body>
+
+</html>

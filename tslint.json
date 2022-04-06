@@ -1,0 +1,43 @@
+{
+    "rules": {
+  
+      //FORMAT
+  
+      "quotemark": [ true, "single" ],
+      "indent": [ true, "spaces", 4 ],
+      "semicolon": [ true, "always", "ignore-interfaces" ],
+      "whitespace": [ true, "check-branch", "check-operator" ],
+      //"newline-before-return": true,
+      "trailing-comma": [
+        true,
+        {
+          "multiline": "never",
+          "singleline": "never"
+        }
+      ],
+  
+      //STYLE
+  
+      "class-name": true,
+      "interface-name": [ true, "always-prefix" ],
+  
+      //FUNCTIONALITY
+  
+      "await-promise": true,
+      "ban-comma-operator": true,
+      "curly": [ true, "ignore-same-line" ],
+      "no-arg": true,
+      "no-duplicate-variable": [ true, "check-parameters" ],
+      //"no-floating-promises": true,
+      "no-for-in-array": true,
+      "no-invalid-this": true,
+      "no-misused-new": true,
+      "no-return-await": true,
+      "no-shadowed-variable": true,
+      "no-sparse-arrays": true,
+      "no-unbound-method": true,
+      "static-this": true
+    
+    }
+  
+  }
